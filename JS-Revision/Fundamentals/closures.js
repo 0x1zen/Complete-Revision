@@ -12,4 +12,14 @@ z(); // so if we call z here which contains the function x ,it could print 7, me
 // complete closure was returned
 // 100 will be printed
 
+// data hidning and encapsulation using closures
+
+function counter(){
+    var count=0;
+    function addOne(){
+        count++;
+    }
+}
+console.log(count);
+
 
