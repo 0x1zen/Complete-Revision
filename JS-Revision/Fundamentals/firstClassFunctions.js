@@ -38,3 +38,36 @@ var abc=function(){
 console.log(abc());
 
 // the ability to pass functions as an aruguement to another function as a parameter is called as first class functions
+
+// assign to a variable
+var func1=function abc(param1){
+
+}
+
+// passing as an arguement
+func1(function(){
+    console.log("hello world");
+})
+
+// returned from another function
+
+function returnFunc(){
+    return function newFunc(){
+
+    }
+}
+
+// storing a function in an data structure
+
+let arr=[
+    function abc(){console.log("Hello")},
+    function xyz(){console.log("world");}
+]
+arr[1];
+
+
+// arrow functions
+
+var a=()=>{
+    
+}
