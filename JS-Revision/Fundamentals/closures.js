@@ -4,7 +4,7 @@ function a(){
         console.log(b); //  here b is just a identifier or a reference.This doesnt mean that b=10;
     }
      b=100;
-    return x; // return complete clouse i.e function + its lexical environment bundled together
+    return x; // returns complete closure i.e function + its lexical environment bundled together
 }
 
 let z=a();
@@ -14,12 +14,34 @@ z(); // so if we call z here which contains the function x ,it could print 7, me
 
 // data hidning and encapsulation using closures
 
-function counter(){
-    var count=0;
-    function addOne(){
+// function counter(){
+//     var count=0;
+//     function addOne(){
+//         count++;
+//     }
+// }
+// console.log(count);
+
+// Better Example for encapsulation
+
+function incrementCount(){
+    let count=0;
+    function incrementer(){
         count++;
+        return count;
     }
+    function getCount() {
+        return count;
+    }
+    return {
+        incrementer,
+        getCount
+    };
 }
-console.log(count);
+
+const counter=incrementCount();
+console.log(counter.incrementer());
+console.log(counter.getCount());
+
 
 
